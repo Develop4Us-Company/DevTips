@@ -1,6 +1,6 @@
 # THIRD_PARTY_LICENSES
 
-This file lists third-party packages referenced by projects in this repository and the licenses they are distributed under. Versions are taken from the .csproj files in this repo.
+Updated on 2026-01-16. This file lists third-party packages referenced by projects in this repository and the licenses they are distributed under. 
 
 ## AutoFixture
 - Package: AutoFixture

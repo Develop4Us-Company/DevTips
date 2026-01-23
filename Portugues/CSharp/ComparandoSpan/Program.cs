@@ -41,7 +41,7 @@ class Program
         // Somando os valores da fatia
         int soma = fatia.Sum();
 
-        Console.WriteLine($"Soma da fatia: {soma}"); // Saída: 20
+        Console.WriteLine($"Soma da fatia: {soma}"); // Saída: 25
     }
 
     static void ManipulandoArrayComSpan()
@@ -58,6 +58,6 @@ class Program
             soma += numero;
         }
 
-        Console.WriteLine($"Soma da fatia: {soma}"); // Saída: 20
+        Console.WriteLine($"Soma da fatia: {soma}"); // Saída: 25
     }
 }

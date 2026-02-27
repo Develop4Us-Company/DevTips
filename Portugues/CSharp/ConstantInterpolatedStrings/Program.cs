@@ -5,7 +5,7 @@
     
     // Usando interpolação em uma constante
     const string Saudacao = $"Bem-vindo ao {Nome} versão {Versao}!";
-
+    
     public static void Main()
     {
         Console.WriteLine(Saudacao);

@@ -1,6 +1,6 @@
 ﻿public interface IMinhaInterface
 {
-    void MostrarMensagem()
+    public void MostrarMensagem()
     {
         Console.WriteLine("Mensagem padrão da interface.");
     }
@@ -9,6 +9,7 @@
 public class MinhaClasse : IMinhaInterface
 {
     // A implementação padrão será usada se este método não for definido.
+    
 }
 
 public class Program

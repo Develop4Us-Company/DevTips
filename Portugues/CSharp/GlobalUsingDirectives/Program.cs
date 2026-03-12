@@ -1,14 +1,14 @@
-﻿// Em qualquer arquivo .cs
-global using System;
-global using System.Collections.Generic;
-
-public class Program
+﻿public class Program
 {
     public static void Main()
     {
-        List<string> lista = new() { "item1", "item2" };
-        Console.WriteLine(string.Join(", ", lista));
+        var produto = new Produto()
+        {
+            Id = 1,
+            Nome = "Caneta"
+        };
+
+        var produtoService = new ProdutoService();
+        produtoService.ImprimirProduto(produto);
     }
 }
-
-

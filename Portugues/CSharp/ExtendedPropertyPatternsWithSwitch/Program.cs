@@ -9,7 +9,7 @@ public class Program
     public static void Main()
     {
         Produto produto = new Produto { Nome = "Caneta", Preco = 5.99m };
-
+        
         string resultado = produto switch
         {
             { Preco: > 10.00m } => "Produto caro",

@@ -1,15 +1,27 @@
-﻿public class Circulo
+﻿public class Exemplo
 {
-    public readonly double PI;
+    public const int TempoMaximo = 30;
 
-    public Circulo()
+    public Exemplo(int tempoMaximo)
     {
-        PI = 3.14159;
+        // Dá erro
+        // this.TempoMaximo = tempoMaximo;
+    }
+}
+
+public class ExemploReadonly
+{
+    public readonly int TempoMaximo;
+
+    public ExemploReadonly(int tempoMaximo)
+    {
+        this.TempoMaximo = tempoMaximo;
     }
 
-    public double CalcularArea(double raio)
+    public void AlterarTempoMaximo(int tempoMaximo)
     {
-        return PI * raio * raio;
+        // Dá erro
+        // this.TempoMaximo = tempoMaximo;
     }
 }
 
@@ -17,8 +29,6 @@ public class Program
 {
     public static void Main()
     {
-        Circulo circulo = new Circulo();
-        double area = circulo.CalcularArea(5);
-        Console.WriteLine($"Área do círculo: {area}");
+        ExemploReadonly exemploReadonly = new ExemploReadonly(30);
     }
 }

@@ -1,12 +1,30 @@
-﻿public class Program
+﻿using System.Runtime.CompilerServices;
+
+[InlineArray(5)]
+public struct NotasAluno
+{
+    private int primeiraNota;
+}
+
+public class Program
 {
     public static void Main()
     {
-        var numeros = [1, 2, 3, 4, 5]; // Inline array inicializado com valores
+        int[] notasUsandoArrayComum = new int[5];
+        notasUsandoArrayComum[0] = 10;
+        notasUsandoArrayComum[1] = 9;
 
-        foreach (var numero in numeros)
+        NotasAluno notas = default;
+
+        notas[0] = 8;
+        notas[1] = 7;
+        notas[2] = 10;
+        notas[3] = 6;
+        notas[4] = 9;
+
+        for (int i = 0; i < 5; i++)
         {
-            Console.WriteLine(numero);
+            Console.WriteLine($"Nota {i + 1}: {notas[i]}");
         }
     }
 }

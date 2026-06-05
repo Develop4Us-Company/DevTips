@@ -4,7 +4,11 @@
     {
         int[] numeros = { 1, 2, 3, 4, 5 };
 
-        // Verifica se a lista começa com 1, tem qualquer número de elementos no meio e termina com 5
+        // Verifica se a lista começa com 1, 
+        // tem qualquer número de elementos no meio e termina com 5
+        // if (numeros is [.., 5])
+        // if (numeros is [1, ..])
+        // if (numeros is [1, .., 3, ..]) // NÃO FUNCIONA
         if (numeros is [1, .., 5])
         {
             Console.WriteLine("A lista começa com 1 e termina com 5.");

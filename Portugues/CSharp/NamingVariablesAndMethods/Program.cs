@@ -1,11 +1,25 @@
-﻿public class UserAccount
+﻿public class ItemVenda
 {
-    public string UserName { get; set; }
-    public DateTime LastLogin { get; set; }
+    public int Quantidade { get; set; }
+    public decimal ValorUnitario { get; set; }
+    public decimal ValorTotal { get; set; }
+}
 
-    public void ProcessData(string userInput)
+public class PedidoVenda
+{
+    public string NomeCliente { get; set; }
+    public List<ItemVenda> ItensVenda { get; } = new List<ItemVenda>();
+
+    public void AdicionarItem(int quantidade, decimal valorUnitario)
     {
-        Console.WriteLine($"Processando dados para o usuário: {userInput}");
+        ItemVenda itemVenda = new ItemVenda
+        {
+            Quantidade = quantidade,
+            ValorUnitario = valorUnitario,
+            ValorTotal = quantidade * valorUnitario
+        };
+
+        ItensVenda.Add(itemVenda);
     }
 }
 
@@ -13,12 +27,12 @@ public class Program
 {
     public static void Main()
     {
-        UserAccount account = new UserAccount
+        PedidoVenda pedidoVenda1 = new PedidoVenda
         {
-            UserName = "João",
-            LastLogin = DateTime.Now
+            NomeCliente = "João"
         };
 
-        account.ProcessData(account.UserName);
+        pedidoVenda1.AdicionarItem(2, 50.00m);
+        pedidoVenda1.AdicionarItem(3, 30.00m);
     }
 }

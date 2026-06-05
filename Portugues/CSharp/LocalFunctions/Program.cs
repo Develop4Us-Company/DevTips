@@ -5,6 +5,8 @@ public class Program
     public static void Main()
     {
         int numero = 5;
+
+        // 5 × 4 × 3 × 2 × 1 = ?
         Console.WriteLine($"Fatorial de {numero} é {CalcularFatorial(numero)}");
 
         // Função local para calcular o fatorial

@@ -8,7 +8,7 @@ public class Program
         var nomeProduto = "Caneta";
 
         // Tentativa de logar uma mensagem curta
-        LogMessage($"Produto: {nomeProduto}");
+        LogMessage($"Produto: {nomeProduto}: outro produto {nomeProduto}");
 
         // Tentativa de logar uma mensagem que resultará em mais de 10 caracteres
         LogMessage($"O nome do produto é {nomeProduto}");
